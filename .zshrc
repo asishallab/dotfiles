@@ -1,10 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export RMANHOME=/opt/rasdaman
-export PATH=/opt/rasdaman/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/LUSTRE/Genetica/ahallab/.oh-my-zsh
+export ZSH=/home/tlaloc/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -89,13 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # Python virtualenv and virtualenvwrapper:
 #source /usr/bin/virtualenvwrapper.sh
 
-# NPM Packages
-NPM_PACKAGES="${HOME}/.npm-packages"
-export NODE_PATH=$NPM_PACKAGES
-PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath):$MANPATH"
-
 # History
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -108,9 +99,5 @@ setopt interactivecomments
 # umask 0022
 
 # R environment:
-export R_LIBS="/home/hallab/R_libs"
-export R_LIBS_USER="/home/hallab/R_libs"
-
-# Scala
-export SCALA_HOME="/opt/scala-2.12.1/"
-export PATH="$SCALA_HOME/bin:$PATH"
+export R_LIBS="/home/tlaloc/R_libs"
+export R_LIBS_USER="/home/tlaloc/R_libs"
