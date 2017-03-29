@@ -93,6 +93,8 @@ SAVEHIST=1000000
 
 alias l='ls -lah'
 alias nvim='workon neovim && nvim'
+alias vi='nvim -u NONE'
+alis vim='nvim -u NONE'
 alias h='history | grep '
 setopt interactivecomments
 # All other users should be able to access the directories I create:
