@@ -85,14 +85,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Python virtualenv and virtualenvwrapper:
-#source /usr/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 
 # History
 HISTSIZE=1000000
 SAVEHIST=1000000
 
 alias l='ls -lah'
-#alias nvim='workon neovim && nvim'
+alias nvim='workon neovim && nvim'
+alias vi='nvim -u NONE'
+alis vim='nvim -u NONE'
 alias h='history | grep '
 setopt interactivecomments
 # All other users should be able to access the directories I create:
