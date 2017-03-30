@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/tlaloc/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -94,12 +94,12 @@ SAVEHIST=1000000
 alias l='ls -lah'
 alias nvim='workon neovim && nvim'
 alias vi='nvim -u NONE'
-alis vim='nvim -u NONE'
+alias vim='nvim -u NONE'
 alias h='history | grep '
 setopt interactivecomments
 # All other users should be able to access the directories I create:
-# umask 0022
+umask 0022
 
 # R environment:
-export R_LIBS="/home/tlaloc/R_libs"
-export R_LIBS_USER="/home/tlaloc/R_libs"
+export R_LIBS="${HOME}/R_libs"
+export R_LIBS_USER="${HOME}/R_libs"
