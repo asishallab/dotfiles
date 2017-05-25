@@ -97,8 +97,9 @@ alias vi='nvim -u NONE'
 alias vim='nvim -u NONE'
 alias h='history | grep '
 setopt interactivecomments
-# All other users should be able to access the directories I create:
-umask 0022
+# All users should have complete access to files and directories I create (to
+# be used from within Docker):
+umask a+rwx
 
 # R environment:
 export R_LIBS="${HOME}/R_libs"
