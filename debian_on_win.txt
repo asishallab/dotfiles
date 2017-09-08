@@ -30,7 +30,7 @@ RUN update-locale LANG=en_US.UTF-8
 
 # regular user env
 RUN su - -c 'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"'
-RUN su - -c 'git clone https://github.com/asishallab/dotfiles /root/dotfiles'
+RUN su - -c 'git clone https://github.com/asishallab/dotfiles.git /root/dotfiles'
 RUN su - -c 'ln -fs /root/dotfiles-gene_families/.zshrc /root'
 RUN su - -c 'ln -fs /root/dotfiles-gene_families/.tmux.conf /root'
 RUN su - -c 'ln -fs /root/dotfiles-gene_families/.ctags /root'
