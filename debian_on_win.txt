@@ -16,7 +16,6 @@ RUN apt-get install -y ssh zsh tmux python-pip virtualenvwrapper curl \
 RUN echo 'deb http://deb.debian.org/debian sid main' >>  /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y neovim/unstable
-RUN apt-get clean
 
 # For compilation of e.g. blat the MACHTYPE is needed
 ENV MACHTYPE x86_64
@@ -31,8 +30,7 @@ RUN update-locale LANG=en_US.UTF-8
 
 # regular user env
 RUN su - -c 'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"'
-RUN su - -c 'wget -O /root/dotfiles.zip https://github.com/asishallab/dotfiles/archive/gene_families.zip'
-RUN su - -c 'unzip /root/dotfiles.zip -d /root/'
+RUN su - -c 'git clone https://github.com/asishallab/dotfiles /root/dotfiles'
 RUN su - -c 'ln -fs /root/dotfiles-gene_families/.zshrc /root'
 RUN su - -c 'ln -fs /root/dotfiles-gene_families/.tmux.conf /root'
 RUN su - -c 'ln -fs /root/dotfiles-gene_families/.ctags /root'
@@ -54,5 +52,7 @@ RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 RUN mkdir /var/run/sshd
 EXPOSE 22
 CMD /usr/sbin/sshd -D
+
+RUN apt-get clean
 
 RUN echo "DONE"
