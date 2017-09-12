@@ -1,11 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export RMANHOME=/opt/rasdaman
-export PATH=/opt/rasdaman/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH=/LUSTRE/Genetica/ahallab/.oh-my-zsh
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -104,13 +96,6 @@ alias l='ls -lah'
 #alias nvim='workon neovim && nvim'
 alias h='history | grep '
 setopt interactivecomments
+
 # All other users should be able to access the directories I create:
-# umask 0022
-
-# R environment:
-export R_LIBS="/home/hallab/R_libs"
-export R_LIBS_USER="/home/hallab/R_libs"
-
-# Scala
-export SCALA_HOME="/opt/scala-2.12.1/"
-export PATH="$SCALA_HOME/bin:$PATH"
+umask 0022
