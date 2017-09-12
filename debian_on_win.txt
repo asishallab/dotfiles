@@ -41,9 +41,7 @@ RUN su - -c 'ln -fs /root/dotfiles/.ctags /root'
 RUN su - -c 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh && mkvirtualenv neovim && pip install neovim'
 RUN su - -c 'mkdir -p /root/.nvim/tmp/backup'
 RUN su - -c 'mkdir /root/.config'
-RUN su - -c 'wget -O /tmp/nvim_conf.zip https://github.com/asishallab/neovim_config/archive/master.zip'
-RUN su - -c 'unzip /tmp/nvim_conf.zip -d /tmp'
-RUN su - -c 'cp -r /tmp/neovim_config-master /root/.config/nvim'
+RUN su - -c 'git clone  https://github.com/asishallab/neovim_config.git /root/.config/nvim'
 #RUN su - -c 'nvim -c ":PlugInstall | :qa" > /dev/null'
 
 # allow root login
