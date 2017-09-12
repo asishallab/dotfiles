@@ -47,7 +47,7 @@ ZSH_THEME="zhann"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(themes)
 
-source $ZSH/oh-my-zsh.sh
+source $ZSH/.oh-my-zsh.sh
 
 # User configuration
 
