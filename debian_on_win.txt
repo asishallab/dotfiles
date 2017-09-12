@@ -1,58 +1,103 @@
-FROM debian:stretch
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-MAINTAINER Dr. Asis Hallab <asis.hallab@gmail.com>
+# Path to your oh-my-zsh installation.
+export ZSH=${HOME}/.oh-my-zsh
 
-# update debian package list
-RUN apt-get update
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="zhann"
 
-# install R and java
-RUN apt-get install -y r-base openjdk-8-jre openjdk-8-jdk
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-# install personal packages
-RUN apt-get install -y ssh zsh tmux python-pip virtualenvwrapper curl \
-  locales locate less wget git exuberant-ctags time
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-# add Debian sid repo 
-RUN echo 'deb http://deb.debian.org/debian sid main' >>  /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get install -y neovim/unstable
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-# For compilation of e.g. blat the MACHTYPE is needed
-ENV MACHTYPE x86_64
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-# install and configure locales
-RUN apt-get install -y locales
-RUN sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
-    echo 'LANG="en_US.UTF-8"'>/etc/default/locale
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-RUN dpkg-reconfigure --frontend=noninteractive locales
-RUN update-locale LANG=en_US.UTF-8
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# regular user env
-RUN su - -c 'git config --global user.email "asis.hallab@gmail.com"'
-RUN su - -c 'git config --global user.name "Dr. Asis Hallab"'
-RUN su - -c 'sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"'
-RUN su - -c 'git clone https://github.com/asishallab/dotfiles.git /root/dotfiles'
-RUN su - -c 'ln -fs /root/dotfiles/.zshrc /root'
-RUN su - -c 'ln -fs /root/dotfiles/.tmux.conf /root'
-RUN su - -c 'ln -fs /root/dotfiles/.ctags /root'
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-# we love neovim
-RUN su - -c 'source /usr/share/virtualenvwrapper/virtualenvwrapper.sh && mkvirtualenv neovim && pip install neovim'
-RUN su - -c 'mkdir -p /root/.nvim/tmp/backup'
-RUN su - -c 'mkdir /root/.config'
-RUN su - -c 'git clone  https://github.com/asishallab/neovim_config.git /root/.config/nvim'
-#RUN su - -c 'nvim -c ":PlugInstall | :qa" > /dev/null'
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-# allow root login
-RUN echo 'root:poiuyt098' | chpasswd
-RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# run ssh server
-RUN mkdir /var/run/sshd
-EXPOSE 22
-CMD /usr/sbin/sshd -D
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
 
-RUN apt-get clean
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-RUN echo "DONE"
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(themes)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Python virtualenv and virtualenvwrapper:
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+
+# History
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+alias l='ls -lah'
+alias nvim='workon neovim && nvim'
+alias vi='nvim -u NONE'
+alias vim='nvim -u NONE'
+alias h='history | grep '
+setopt interactivecomments
+# All users should have complete access to files and directories I create (to
+# be used from within Docker):
+umask a+rwx
