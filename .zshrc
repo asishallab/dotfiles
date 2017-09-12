@@ -1,3 +1,6 @@
+# Path to your oh-my-zsh installation.
+export ZSH=${HOME}/.oh-my-zsh
+
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -47,8 +50,6 @@ ZSH_THEME="zhann"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(themes)
 
-source $ZSH/.oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -85,8 +86,6 @@ source $ZSH/.oh-my-zsh.sh
 NPM_PACKAGES="${HOME}/.npm-packages"
 export NODE_PATH=$NPM_PACKAGES
 PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-export MANPATH="$NPM_PACKAGES/share/man:$(manpath):$MANPATH"
 
 # History
 HISTSIZE=1000000
