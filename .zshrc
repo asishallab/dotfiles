@@ -98,5 +98,10 @@ alias l='ls -lah'
 alias h='history | grep '
 setopt interactivecomments
 
+# PATH adjustments
+if [ -d "/usr/local/texlive/2018/bin/x86_64-linux" ]; then
+  export PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-linux
+fi
+
 # All other users should be able to access the directories I create:
 umask 0022
