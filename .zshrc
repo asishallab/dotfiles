@@ -103,5 +103,12 @@ if [ -d "/usr/local/texlive/2018/bin/x86_64-linux" ]; then
   export PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-linux
 fi
 
+# Apache ANT
+export ANT_HOME=/opt/apache-ant-1.10.8
+export PATH=$PATH:${ANT_HOME}/bin
+
+# Julia
+export PATH=$PATH:/opt/julia-1.0.5/bin
+
 # All other users should be able to access the directories I create:
 umask 0022
