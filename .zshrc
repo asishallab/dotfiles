@@ -102,6 +102,15 @@ setopt interactivecomments
 if [ -d "/usr/local/texlive/2018/bin/x86_64-linux" ]; then
   export PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-linux
 fi
+if [ -d "/home/hallab/.local/bin" ]; then
+  export PATH=$PATH:/home/hallab/.local/bin
+fi
+
+
+# Rust toolchain manager
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
+fi
 
 # Apache ANT
 export ANT_HOME=/opt/apache-ant-1.10.8
