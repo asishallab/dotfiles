@@ -3,7 +3,7 @@ theme = "gruvbox_dark_hard"
 [editor]
 line-number = "relative"
 mouse = true
-rulers = [80]
+#rulers = [80]
 shell = ["zsh", "-c"]
 
 [editor.statusline]
