@@ -119,5 +119,9 @@ export PATH=$PATH:${ANT_HOME}/bin
 # Julia
 export PATH=$PATH:/opt/julia-1.0.5/bin
 
+if [ -d $HOME/.local/bin ]; then
+  export PATH=$PATH:$HOME/.local/bin
+fi
+
 # All other users should be able to access the directories I create:
 umask 0022
