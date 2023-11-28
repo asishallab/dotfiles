@@ -1,0 +1,21 @@
+[legacy/profiles:]
+default='5b2b0ff0-2a3e-401e-9d3b-f54885fac610'
+list=['5b2b0ff0-2a3e-401e-9d3b-f54885fac610']
+
+[legacy/profiles:/:5b2b0ff0-2a3e-401e-9d3b-f54885fac610]
+allow-bold=true
+background-color='#272728282222'
+bold-color='#F8F8F8F8F2F2'
+bold-color-same-as-fg=true
+cursor-background-color='#F8F8F8F8F2F2'
+cursor-colors-set=true
+cursor-foreground-color='#272728282222'
+default-size-columns=99
+default-size-rows=36
+font='JetBrainsMonoNL Nerd Font Mono 14'
+foreground-color='#F8F8F8F8F2F2'
+palette=['#757571715E5E', '#F9F926267272', '#A6A6E2E22E2E', '#F4F4BFBF7575', '#6666D9D9EFEF', '#AEAE8181FFFF', '#2A2AA1A19898', '#F9F9F8F8F5F5', '#272728282222', '#F9F926267272', '#A6A6E2E22E2E', '#F4F4BFBF7575', '#6666D9D9EFEF', '#AEAE8181FFFF', '#2A2AA1A19898', '#F8F8F8F8F2F2']
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+visible-name='Monokai Dark'
