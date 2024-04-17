@@ -125,3 +125,8 @@ fi
 
 # All other users should be able to access the directories I create:
 umask 0022
+
+# Turn off all beeps
+unsetopt BEEP
+# Turn off autocomplete beeps
+unsetopt LIST_BEEP
