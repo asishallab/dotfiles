@@ -96,6 +96,7 @@ SAVEHIST=1000000
 alias l='ls -lah'
 #alias nvim='workon neovim && nvim'
 alias h='history | grep '
+alias fs="wmctrl -r ':ACTIVE:' -b toggle,fullscreen"
 setopt interactivecomments
 
 # PATH adjustments
