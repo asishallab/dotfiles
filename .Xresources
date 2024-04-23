@@ -1,30 +1,25 @@
-! Jellybeans Terminal Colours
-urxvt.background: #151515
-urxvt.foreground: #ffffff
-! black
-urxvt.color0: #888888
-urxvt.color8: #525252
-! red
-urxvt.color1: #cf6a4c
-urxvt.color9: #ff9d80
-! green
-urxvt.color2: #99ad6a
-urxvt.color10: #c3e6ad
-! yellow
-urxvt.color3: #fad07a
-urxvt.color11: #ffefbf
-! blue
-urxvt.color4: #8197bf
-urxvt.color12: #accaff
-! magenta
-urxvt.color5: #8787af
-urxvt.color13: #c4c4ff
-! cyan
-urxvt.color6: #8fbfdc
-urxvt.color14: #80bfaf
-! white
-urxvt.color7: #888888
-urxvt.color15: #e8e8d3
+! Manually adpated Monokai Pro theme:
+urxvt.foreground:   #f8f8f2
+urxvt.background:   #272822
+urxvt.cursorColor:  #f8f8f2
+
+urxvt.color0:       #272822
+urxvt.color1:       #f92672
+urxvt.color2:       #a6e22e
+urxvt.color3:       #f4bf75
+urxvt.color4:       #66d9ef
+urxvt.color5:       #ae81ff
+urxvt.color6:       #a1efe4
+urxvt.color7:       #f8f8f2
+
+urxvt.color8:       #75715e
+urxvt.color9:       #f92672
+urxvt.color10:      #a6e22e
+urxvt.color11:      #f4bf75
+urxvt.color12:      #66d9ef
+urxvt.color13:      #ae81ff
+urxvt.color14:      #a1efe4
+urxvt.color15:      #f9f8f5
 
 !! URxvt Appearance
 URxvt.letterSpace: 0
@@ -50,3 +45,111 @@ URxvt.keysym.Control-Meta-v: builtin-string:
 ! Xterm escapes, word by word movement
 URxvt.keysym.Control-Left: \033[1;5D
 URxvt.keysym.Control-Right: \033[1;5C
+
+! ========================
+! ALTERNATIVE THEMES BELOW
+! ========================
+!
+! Nightowl theme
+! --------------
+! special
+! *.foreground:   #d6deeb
+! *.background:   #011627
+! *.cursorColor:  #d6deeb
+! 
+! black
+! *.color0:       #011627
+! *.color8:       #575656
+! 
+! red
+! *.color1:       #ef5350
+! *.color9:       #ef5350
+! 
+! green
+! *.color2:       #22da6e
+! *.color10:      #22da6e
+! 
+! yellow
+! *.color3:       #addb67
+! *.color11:      #ffeb95
+! 
+! blue
+! *.color4:       #82aaff
+! *.color12:      #82aaff
+! 
+! magenta
+! *.color5:       #c792ea
+! *.color13:      #c792ea
+! 
+! cyan
+! *.color6:       #21c7a8
+! *.color14:      #7fdbca
+! 
+! white
+! *.color7:       #ffffff
+! *.color15:      #ffffff
+
+! -----------------------------------------------------------------------------
+! File: gruvbox-dark.xresources
+! Description: Retro groove colorscheme generalized
+! Author: morhetz <morhetz@gmail.com>
+! Source: https://github.com/morhetz/gruvbox-generalized
+! Last Modified: 6 Sep 2014
+! -----------------------------------------------------------------------------
+
+! ! hard contrast: *background: #1d2021
+! *background: #282828
+! ! soft contrast: *background: #32302f
+! *foreground: #ebdbb2
+! ! Black + DarkGrey
+! *color0:  #282828
+! *color8:  #928374
+! ! DarkRed + Red
+! *color1:  #cc241d
+! *color9:  #fb4934
+! ! DarkGreen + Green
+! *color2:  #98971a
+! *color10: #b8bb26
+! ! DarkYellow + Yellow
+! *color3:  #d79921
+! *color11: #fabd2f
+! ! DarkBlue + Blue
+! *color4:  #458588
+! *color12: #83a598
+! ! DarkMagenta + Magenta
+! *color5:  #b16286
+! *color13: #d3869b
+! ! DarkCyan + Cyan
+! *color6:  #689d6a
+! *color14: #8ec07c
+! ! LightGrey + White
+! *color7:  #a89984
+! *color15: #ebdbb2
+
+! ! Jellybeans Terminal Colours
+! urxvt.background: #151515
+! urxvt.foreground: #ffffff
+! ! black
+! urxvt.color0: #888888
+! urxvt.color8: #525252
+! ! red
+! urxvt.color1: #cf6a4c
+! urxvt.color9: #ff9d80
+! ! green
+! urxvt.color2: #99ad6a
+! urxvt.color10: #c3e6ad
+! ! yellow
+! urxvt.color3: #fad07a
+! urxvt.color11: #ffefbf
+! ! blue
+! urxvt.color4: #8197bf
+! urxvt.color12: #accaff
+! ! magenta
+! urxvt.color5: #8787af
+! urxvt.color13: #c4c4ff
+! ! cyan
+! urxvt.color6: #8fbfdc
+! urxvt.color14: #80bfaf
+! ! white
+! urxvt.color7: #888888
+! urxvt.color15: #e8e8d3
