@@ -1,25 +1,48 @@
+! Colorscheme Monokai Dark
+! https://github.com/Gogh-Co/Gogh/blob/master/themes/Monokai%20Dark.yml
+urxvt.color1: #75715E
+urxvt.color2: #F92672
+urxvt.color3: #A6E22E
+urxvt.color4: #F4BF75
+urxvt.color5: #66D9EF
+urxvt.color6: #AE81FF
+urxvt.color7: #2AA198
+urxvt.color8: #F9F8F5
+urxvt.color9: #272822
+urxvt.color10: #F92672 
+urxvt.color11: #A6E22E 
+urxvt.color12: #F4BF75 
+urxvt.color13: #66D9EF 
+urxvt.color14: #AE81FF 
+urxvt.color15: #2AA198 
+urxvt.color0: #F8F8F2 
+
+urxvt.background: #272822
+urxvt.foreground: #F8F8F2
+urxvt.cursorColor: #F8F8F2
+
 ! Manually adpated Monokai Pro theme:
-urxvt.foreground:   #f8f8f2
-urxvt.background:   #272822
-urxvt.cursorColor:  #f8f8f2
-
-urxvt.color0:       #272822
-urxvt.color1:       #f92672
-urxvt.color2:       #a6e22e
-urxvt.color3:       #f4bf75
-urxvt.color4:       #66d9ef
-urxvt.color5:       #ae81ff
-urxvt.color6:       #a1efe4
-urxvt.color7:       #f8f8f2
-
-urxvt.color8:       #75715e
-urxvt.color9:       #f92672
-urxvt.color10:      #a6e22e
-urxvt.color11:      #f4bf75
-urxvt.color12:      #66d9ef
-urxvt.color13:      #ae81ff
-urxvt.color14:      #a1efe4
-urxvt.color15:      #f9f8f5
+! urxvt.foreground:   #f8f8f2
+! urxvt.background:   #272822
+! urxvt.cursorColor:  #f8f8f2
+! 
+! urxvt.color0:       #272822
+! urxvt.color1:       #f92672
+! urxvt.color2:       #a6e22e
+! urxvt.color3:       #f4bf75
+! urxvt.color4:       #66d9ef
+! urxvt.color5:       #ae81ff
+! urxvt.color6:       #a1efe4
+! urxvt.color7:       #f8f8f2
+! 
+! urxvt.color8:       #75715e
+! urxvt.color9:       #f92672
+! urxvt.color10:      #a6e22e
+! urxvt.color11:      #f4bf75
+! urxvt.color12:      #66d9ef
+! urxvt.color13:      #ae81ff
+! urxvt.color14:      #a1efe4
+! urxvt.color15:      #f9f8f5
 
 !! URxvt Appearance
 URxvt.letterSpace: 0
